@@ -29,6 +29,7 @@ $ python3 -m pip install pandas
 Saves just the scored articles from the first csv into the second csv.
 
 `$ python3 classify.py spamScoredArticles.csv --scored onlyScored.csv`
+> Saves just the scored articles from `spamScoredArticles.csv` in `onlyScored.csv`
 
 ## TODO
  - Auto-open Chrome with stock symbol description and article line
