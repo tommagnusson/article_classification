@@ -31,5 +31,10 @@ Saves just the scored articles from the first csv into the second csv.
 `$ python3 classify.py spamScoredArticles.csv --scored onlyScored.csv`
 > Saves just the scored articles from `spamScoredArticles.csv` in `onlyScored.csv`
 
+## Browser mode
+Automatically open a google search of the stock symbol, as well as the article url.
+
+`$ python3 classify.py spamScoredArticles.csv --browse`
+
 ## TODO
- - Auto-open Chrome with stock symbol description and article line
+ - Auto close chrome tabs in `--browse` mode
