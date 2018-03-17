@@ -42,6 +42,10 @@ class ManualClassifier:
             # mutate the actual file
             df.at[df.title.isin([t]), 'spam'] = classification
 
+    def export_scored(self, out_file):
+        df = pd.read_csv(self.file, index_col=['article_id'])
+        classifiedSoFar = df.dropna()
+        ManualClassifier.saveFile(classifiedSoFar, out_file)
 
     # Takes user input, s or h, for the given article title.
     # Handles invalid input by running the function again
@@ -49,10 +53,10 @@ class ManualClassifier:
         normal(f'{stock}\n{url}\n{title}')
         classification = input('Spam (s) or Ham (h)? Save (w) or exit (e):')
         if(classification == 'w'):
-            self.__saveFile(df)
+            ManualClassifier.saveFile(df, self.file)
             return self.__spamOrHam(title, stock, url, df)
         if(classification == 'e'):
-            self.__saveFile(df)
+            ManualClassifier.saveFile(df, self.file)
             exit()
             return;
         if(classification not in ['s', 'h']):
@@ -62,20 +66,27 @@ class ManualClassifier:
         return classification
 
     # make sure to save the results of the csv
-    def __saveFile(self, df):
-        normal(f'Saving {self.file}...')
-        df.to_csv(self.file, encoding='utf-8')
-        ok(f'{self.file} saved!')
+    def saveFile(df, file_name):
+        normal(f'Saving {file_name}...')
+        df.to_csv(file_name, encoding='utf-8')
+        ok(f'{file_name} saved!')
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('file',
                         help='The path to the csv file containing the articles, with a column for spam or ham.')
+    parser.add_argument('-s', '--scored',
+                        help='The name of the csv file to be created containing only the articles that are scored')
 
     args = parser.parse_args()
     csv_file = args.file
+    out_file = args.scored
 
     classifier = ManualClassifier(csv_file)
+    if out_file:
+        classifier.export_scored(out_file)
+        exit()
+
     classifier.loop()
 
 # Color the terminal output
