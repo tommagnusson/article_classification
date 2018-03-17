@@ -2,7 +2,7 @@
 Manual Article Spam or Ham Classification program
 
 <p align="center">
-  <img width="600" src="https://cdn.rawgit.com/tommagnusson/article_classification/master/articleSVG.svg">
+  <img width="600" src="https://cdn.rawgit.com/tommagnusson/article_classification/830a52b4/articleSVG.svg">
 </p>
 
 # Getting Started
@@ -25,3 +25,6 @@ $ python3 -m pip install pandas
 
 `$ python3 classify.py spamScoredArticles.csv`
 
+## TODO
+ - Auto-open Chrome with stock symbol description and article link
+ - export scored-only articles into separate csv
