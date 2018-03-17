@@ -19,5 +19,5 @@ $ python3 -m pip install pandas
 1. Run the program with `spamScoredArticles.csv`, the file that contains the articles
 1. Manually classify away
 
-`$ python classify.py spamScoredArticles.csv`
+`$ python3 classify.py spamScoredArticles.csv`
 
