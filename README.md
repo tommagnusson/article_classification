@@ -1,6 +1,10 @@
 # Article Classification for Quikfo
 Manual Article Spam or Ham Classification program
 
+<p align="center">
+  <img width="600" src="https://cdn.rawgit.com/tommagnusson/article_classification/master/articleSVG.svg">
+</p>
+
 # Getting Started
 
 ## Dependencies
