@@ -25,6 +25,10 @@ $ python3 -m pip install pandas
 
 `$ python3 classify.py spamScoredArticles.csv`
 
+## Exporting just the scored articles into separate CSV
+Saves just the scored articles from the first csv into the second csv.
+
+`$ python3 classify.py spamScoredArticles.csv --scored onlyScored.csv`
+
 ## TODO
- - Auto-open Chrome with stock symbol description and article link
- - export scored-only articles into separate csv
+ - Auto-open Chrome with stock symbol description and article line
