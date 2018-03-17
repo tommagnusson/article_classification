@@ -25,3 +25,6 @@ $ python3 -m pip install pandas
 
 `$ python3 classify.py spamScoredArticles.csv`
 
+## TODO
+ - Auto-open Chrome with stock symbol description and article link
+ - export scored-only articles into separate csv
