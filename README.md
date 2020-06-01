@@ -2,7 +2,7 @@
 Manual Article Spam or Ham Classification program
 
 <p align="center">
-  <img width="600" src="https://cdn.rawgit.com/tommagnusson/article_classification/830a52b4/articleSVG.svg">
+  <img width="600" src="https://raw.githubusercontent.com/tommagnusson/article_classification/master/articleSVG.svg" alt="example of article classification for Quikfo">
 </p>
 
 # Getting Started
